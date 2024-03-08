@@ -76,3 +76,25 @@ table {
 body, html {
     font-family: Roboto, sans-serif;
 }
+
+div { border: 1px solid black; box-sizing: border-box; }
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 200px 1fr;
+}
+
+.header {
+    grid-row: span 2;
+}
+
+.sidebar {
+    grid-column: span 2;
+}
+
+.content {
+    grid-area: 2 / 2;
+}

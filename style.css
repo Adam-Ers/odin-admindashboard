@@ -82,9 +82,8 @@ body, html {
 /* div { border: 1px solid black; box-sizing: border-box; } */
 
 .main {
-    min-width: 800px;
-    min-height: 500px;
-    width: 100vw;
+    min-width: 1400px;
+    min-height: 1000px;
     height: 100vh;
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -114,7 +113,7 @@ body, html {
 .spyglass {
     display: flex;
     align-items: center;
-    font-size: 1.1rem;
+    width: 1.6rem;
 }
 
 .searchbarInput {
@@ -140,8 +139,13 @@ body, html {
     font-size: 1.3rem;
 }
 
+.notificationBell {
+    width: 1.8rem;
+}
+
 .profilePic {
-    font-size: 3rem;
+    width: 3.5rem;
+    border-radius: 100%;
 }
 
 .profileName {
@@ -157,7 +161,8 @@ body, html {
 }
 
 .profilePicBig {
-    font-size: 5rem;
+    width: 5rem;
+    border-radius: 100%;
 }
 
 .greetingText {
@@ -196,8 +201,8 @@ body, html {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    padding: 30px 20px;
+    gap: 70px;
+    padding: 30px 30px;
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--whiteTextColor);
@@ -210,17 +215,27 @@ body, html {
 .sidebarLogo, .sidebarGroup1, .sidebarGroup2 {
     display: grid;
     grid-template-columns: 2rem 1fr;
-    gap: 2rem 1.5rem;
+    gap: 1.5rem 1.5rem;
 }
 
 .sidebarIcon {
     grid-column: 1;
     align-self: center;
     justify-self: center;
+    width: 2rem;
+}
+
+img.sidebarIcon {
+    filter: invert(93%) sepia(98%) saturate(175%) hue-rotate(359deg) brightness(126%) contrast(96%);
+}
+
+.sidebarLogo img.sidebarIcon {
+    width: 3.5rem;
 }
 
 .sidebarText {
     grid-column: 2;
+    align-self: center;
 }
 
 .content {

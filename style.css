@@ -242,3 +242,65 @@ img.sidebarIcon {
     grid-area: 2 / 2;
     background-color: #e7e5e4;
 }
+
+.projectsContainer {
+    padding: 36px 24px;
+}
+
+.projectsHeader {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.projectsGrid {
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 440px);
+    gap: 30px;
+}
+
+.projectsCard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    width: 440px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 40px 30px;
+    padding-bottom: 30px;
+    background-color: var(--whiteTextColor);
+    overflow: hidden;
+    box-shadow: 4px 4px 6px #CCCCCC;
+}
+
+.projectsCardStripe {
+    background-color: #22d3ee;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 2%;
+    height: 100%;
+}
+
+.projectsCardHeader {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.projectsCardBody {
+    margin-top: 4px;
+    font-size: 1.2rem;
+    color: #57534e;
+}
+
+.projectsCardFooter {
+    align-self: end;
+    margin-top: auto;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.projectsCardFooterImage {
+    width: 1.6rem;
+}

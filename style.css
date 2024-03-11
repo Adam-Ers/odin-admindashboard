@@ -77,14 +77,16 @@ body, html {
     font-family: Roboto, sans-serif;
     --sidebarColor: #15803d;
     --whiteTextColor: #fafaf9;
+    min-height: 100%;
+    display: grid;
 }
 
 /* div { border: 1px solid black; box-sizing: border-box; } */
 
 .main {
     min-width: 1400px;
-    min-height: 1000px;
-    height: 100vh;
+    min-height: 1200px;
+    height: 100%;
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 200px 1fr;
@@ -241,13 +243,20 @@ img.sidebarIcon {
 .content {
     grid-area: 2 / 2;
     background-color: #e7e5e4;
-}
-
-.projectsContainer {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    grid-template-rows: 400px 425px;
+    gap: 24px;
+    box-sizing: border-box;
     padding: 36px 24px;
 }
 
-.projectsHeader {
+.projectsContainer {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.projectsHeader, .announcementsHeader, .trendingHeader {
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -303,4 +312,58 @@ img.sidebarIcon {
 
 .projectsCardFooterImage {
     width: 1.6rem;
+}
+
+.announcementsContainer {
+    margin-right: 10px;
+}
+
+.announcementsCard {
+    box-sizing: border-box;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    color: #57534e;
+    background-color: var(--whiteTextColor);
+    border-radius: 10px;
+    padding: 40px 30px;
+    padding-bottom: 30px;
+    box-shadow: 4px 4px 6px #CCCCCC;
+}
+
+.announcementsCard hr {
+    margin: 20px 0px;
+    border: 0;
+    height: 1px;
+    background-color: #d6cdc1;
+}
+
+.announcementsCardHeader {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.trendingContainer {
+    align-self: end;
+}
+
+.trendingCard {
+    box-sizing: border-box;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    color: #57534e;
+    background-color: var(--whiteTextColor);
+    border-radius: 10px;
+    padding: 40px 30px;
+    padding-bottom: 30px;
+    box-shadow: 4px 4px 6px #CCCCCC;
+}
+
+@media only screen and (max-width: 1646px) {
+    .main {
+        height: 170%;
+    }
 }
